@@ -67,3 +67,8 @@ Preds <-  nb_preds %>%
   select(id, type)
 
 vroom_write(x=Preds, file= "kerasnn.csv", delim=",")
+
+library(reticulate)
+virtualenv_remove("r-reticulate")
+remove.packages("keras")
+remove.packages("tensorflow")
